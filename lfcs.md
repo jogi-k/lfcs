@@ -141,8 +141,24 @@ tar
 ===
 tar -a detektiert den Kompressions-Algorithmus anhand der Extension
 
+Things to remember or check
+===========================
+- Backups : tar -caf
+- User processes : ps, top , kill
+- Restoring : tar, permissions check
+- File-permissions : ulimits
+- Permissions : /etc/security/limits.d (pam)
+- Accessing root account : /etc/sudoers
+- Editing text on the command-line : cut, cat, sed, tac, tr, ...
+- format filesystemss: mkfs.xxx, e2label,
+- swap : mkswap
+- Partitioning : fdsik
+- LVM : pvcreate, vgcreate, lvcreate
+
+
 
 TODO
 ====
 for-Loops
+
 
