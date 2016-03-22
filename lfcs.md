@@ -9,12 +9,12 @@ tmux.conf
 
 Splitten
 --------
-- C-a % : Vertikal  
-- C-a " : horizontal  
-- C-a x : schliesst  
-- C-a cursor huepft  
-- C-a blank : cycled durch die verschiedenen layouts   
-- C-a Z zoomt ein und aus
+  C-a % : Vertikal  
+  C-a " : horizontal    
+  C-a x : schliesst   
+  C-a cursor huepft    
+  C-a blank : cycled durch die verschiedenen layouts   
+  C-a Z zoomt ein und aus  
 
 
 
@@ -24,17 +24,19 @@ syntax on
 set number  
 set background=dark  
 
-CTRL-V : Visual Column-Mode   
+CTRL-V : Visual Column-Mode     
 v : Visual Mode  
 Shift-V : Visual Line-Mode  
 
-anschliessend kann man mit Shift i inserten oder mit Shift a appenden. Wenn man dann ESC drueckt, wird das auf alle Spalten angewandt  
+anschliessend kann man mit Shift i inserten oder mit   
+Shift a appenden.   
+Wenn man dann ESC drueckt, wird das auf alle Spalten angewandt  
 
-Tabs und Spaces mit
-set listchars=tab:>_,eol:¶  
-set list  
+Tabs und Spaces mit  
+ set listchars=tab:>_,eol:¶  
+ set list  
 Das umgekehrte P oben bekommt man mit CTRL-K PI.  
-Das ist ein digraph.  
+Das ist ein digraph.   
 Alle digraphs bekommt man mit :digraphs  
 
 Shell
@@ -47,7 +49,7 @@ Shell
 
 root
 ====
-sudo -i
+sudo -i  
 
 
 Gruppen
@@ -73,8 +75,8 @@ Syntax : awk '{ print $2 }' file.txt
 
 cut
 ===
--f 1-2 : Felder, separiert durch Tab  
--c 3-6 : Characters  
+- -f 1-2 : Felder, separiert durch Tab  
+- -c 3-6 : Characters  
 
 
 cat
@@ -109,9 +111,9 @@ Aequivalent zu head -5 file, aber zu sed -n 2,5p file gibts schon nix mehr...
 
 tr
 ==
-tr 'c1' 'c2' ersetzt c1 durch c2  
-tr -s 'c1'  ersetzt wiederholtes Vorkommen von c1 durch ein c1   
-=> tr -s ' ' ersetzt Spaces durch ein Space!  
+- tr 'c1' 'c2' ersetzt c1 durch c2  
+- tr -s 'c1'  ersetzt wiederholtes Vorkommen von c1 durch ein c1   
+- => tr -s ' ' ersetzt Spaces durch ein Space!  
 
 
 LVM
@@ -133,7 +135,11 @@ Step 8 : vi /etc/fstab
 
 FOR-Loops
 =========
-for i in {1..}; do echo "Hallo $i" ; echo "==========" ; echo " "; done  
+for i in {1..};   
+  do echo "Hallo $i" ;   
+  echo "==========" ; 
+  echo " ";   
+done  
 
 
 
@@ -157,8 +163,5 @@ Things to remember or check
 
 
 
-TODO
-====
-for-Loops  
 
 
