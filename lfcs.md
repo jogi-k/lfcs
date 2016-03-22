@@ -3,9 +3,9 @@ tmux
 
 tmux.conf
 ---------
- unbind C-b
- set -g prefix C-a
- bind C-a send-prefix
+ unbind C-b  
+ set -g prefix C-a  
+ bind C-a send-prefix  
 
 Splitten
 --------
