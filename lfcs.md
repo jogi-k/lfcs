@@ -81,14 +81,14 @@ cut
 
 cat
 ===
-- cat -T stellt Tabs dar!
+- _cat -T file_ stellt Tabs von file dar!
 - Als Vorbereitung wenn gecuted werden soll  
 
 head und tail
 =============
-- head -xxx gibt xxx Zeilen vom Anfang aus
-- tail -n +xxx schneidet xxx Zeilen vom Anfang ab !
-- tail -xxx gibt die letzten xxx Zeilen des Endes aus
+- _head -xxx file_gibt xxx Zeilen vom Anfang von file aus
+- _tail -n +xxx file_ schneidet xxx Zeilen vom Anfang von file ab !
+- _tail -xxx file_ gibt die letzten xxx Zeilen des Endes von file aus
 
 
 column
@@ -109,30 +109,39 @@ fdisk
 
 sed
 ===
-Standard : sed -e 's/xxx/yyy/g' file  
+Standard : _sed -e 's/xxx/yyy/g' file_  
 Da kann man sich das -e sparen  
 sed kann bestimmte Dinge nur auf Teile anwenden, zum Beispiel auf betsimmte Zeilen  
-sed -n xxx,yyyp file gibt file zwischen Zeile xxx und yyy aus, also sed -n 1,5p file ist  
-Aequivalent zu head -5 file, aber zu sed -n 2,5p file gibts schon nix mehr...  
+_sed -n xxx,yyyp file_ gibt file zwischen Zeile xxx und yyy aus, also sed -n 1,5p file ist  
+Aequivalent zu _head -5 file_, aber zu _sed -n 2,5p file_ gibts schon nix mehr...  
   
 
 tr
 ==
-- tr 'c1' 'c2' ersetzt c1 durch c2  
-- tr -s 'c1'  ersetzt wiederholtes Vorkommen von c1 durch ein c1   
-- => tr -s ' ' ersetzt Spaces durch ein Space!  
+- _tr 'c1' 'c2'_ ersetzt c1 durch c2  
+- _tr -s 'c1'_  ersetzt wiederholtes Vorkommen von c1 durch ein c1   
+- => _tr -s ' '_ ersetzt Spaces durch ein Space!  
+
+
+join
+====
+- _join file1 file2_ directly joins on field1, not matching lines are omitted
+- _join -a1 -a2 file1 file2_ joins ALL, but you can not tell, where something is missing
+- _join -a1 -a2 -o 0 1.2 2.2 -e "---" file1 file2_ joins all and through the format -o 0 ... and the -e "---" you can tell which fields are missing.
+- Problem : If you want to join consequtively more files, the format gets rather exhaustive...
+- Solution: Use _auto_ for the format-Parameter -o : _join -a1 -a2 -o auto -e "---" summary-file file2_ 
 
 
 LVM
 ===
-Step 1 : pvcreate /dev/sdb1 /dev/sdb2 ...  
-Step 2 : pvscan  
-Step 3 : vgcreate MeinVolume /dev/sdb1  /dev/sdb2 ...  
-Step 4 : vgscan  
-Step 5 : lvcreate --size xxx --name "yyy" MeinVolume  
-Step 6 : lvscan  
-Step 7 : mkfs.ext /dev/MeinVolume/yyy  
-Step 8 : vi /etc/fstab  
+- Step 1 : _pvcreate /dev/sdb1 /dev/sdb2 ..._  
+- Step 2 : _pvscan_  
+- Step 3 : _vgcreate MeinVolume /dev/sdb1  /dev/sdb2 ..._  
+- Step 4 : _vgscan_  
+- Step 5 : _lvcreate --size xxx --name "yyy" MeinVolume_  
+- Step 6 : _lvscan_  
+- Step 7 : _mkfs.ext /dev/MeinVolume/yyy_  
+- Step 8 : _vi /etc/fstab_  
 
 
 /etc/security/limits.d
@@ -152,19 +161,19 @@ done
 
 tar
 ===
-tar -a detektiert den Kompressions-Algorithmus anhand der Extension  
+_tar -a ..._ detektiert den Kompressions-Algorithmus anhand der Extension  
 
 Things to remember or check
 ===========================
-- Backups : tar -caf  
-- User processes : ps, top , kill  
-- Restoring : tar, permissions check  
-- File-permissions : ulimits  
-- Permissions : /etc/security/limits.d (pam)  
-- Accessing root account : /etc/sudoers  
-- Editing text on the command-line : cut, cat, sed, tac, tr, ...  
-- format filesystemss: mkfs.xxx, e2label,  
-- swap : mkswap  
+- Backups : _tar -caf_  
+- User processes : _ps, top , kill_  
+- Restoring : _tar, permissions check_  
+- File-permissions : _ulimits_  
+- Permissions : _/etc/security/limits.d_ (pam)  
+- Accessing root account : _/etc/sudoers_  
+- Editing text on the command-line : _cut, cat, sed, tac, tr, ..._  
+- format filesystemss: _mkfs.xxx, e2label_ ,  
+- swap : _mkswap_  
 - Partitioning : fdsik  
 - LVM : pvcreate, vgcreate, lvcreate  
 
