@@ -84,6 +84,13 @@ cat
 - cat -T stellt Tabs dar!
 - Als Vorbereitung wenn gecuted werden soll  
 
+head und tail
+=============
+- head -xxx gibt xxx Zeilen vom Anfang aus
+- tail -n +xxx schneidet xxx Zeilen vom Anfang ab !
+- tail -xxx gibt die letzten xxx Zeilen des Endes aus
+
+
 column
 ======
 -t macht pretty  
