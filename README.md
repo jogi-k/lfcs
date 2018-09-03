@@ -190,6 +190,22 @@ More things to remember
 Oder andere keyboard-layouts in ```/usr/share/keymaps```
 
 
+Backticks Replacement
+=====================
+Instead of backticks
+    hugo=`egon`
+better use
+    hugo=$(egon)
+    
+Do not confuse with 
+    hugo=${egon}
+which is encapsulation of shell-Variable hugo, which you normally would adress with $hugo
+
+ssh-access without password
+===========================
+see [this site here: http://www.linuxproblem.org/art_9.html](http://www.linuxproblem.org/art_9.html)
+
+
 
 
 
