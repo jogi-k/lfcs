@@ -203,7 +203,9 @@ which is encapsulation of shell-Variable hugo, which you normally would adress w
 
 ssh-access without password
 ===========================
-see [this site here: http://www.linuxproblem.org/art_9.html](http://www.linuxproblem.org/art_9.html)
+* see [this site here: http://www.linuxproblem.org/art_9.html](http://www.linuxproblem.org/art_9.html)
+* or use : _ssh-copy-id user@server_ if you have a pub-key
+
 
 
 
