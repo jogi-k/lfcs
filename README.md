@@ -210,6 +210,9 @@ Administrating several hosts
 ============================
 * ```clusterssh```
 * ugly but cool
+* or use instead (if anyway already using tmux...) : ```tmux-cssh``` from e.g. /github.com/zinic
+
+
 
 
 
