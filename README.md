@@ -214,7 +214,12 @@ Administrating several hosts
 
 
 
+Disk-Speed
+==========
 
+* use dd
+* eg: ```dd if=/dev/zero of=file_on_disk_to_test bs=1M count=1024 status=progress```
+* use ```conv=fdatasync``` as option to sync already with dd, so the statistik printed out is right
 
 
 
