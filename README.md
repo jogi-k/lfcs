@@ -67,7 +67,7 @@ File-Infos
 ==========
 * find 
 * locate
-* type : zeigt was es fuer eine Art AUfruf ist! Zeigt zum Beispiel aliase an
+* type : zeigt was es fuer eine Art Aufruf ist! Zeigt zum Beispiel aliase an
 * which : zeigt an, welches command genutzt wird ( bei mehreren ) 
 * whereis : zeigt auch wie which das Binary an, zeigt aber auch an, wo die Manuals liegen
 
@@ -150,7 +150,7 @@ LVM
 
 /etc/security/limits.d
 ======================
-- Anazhl logins begrenzen, wirkt nur auf Login Shells, Examples selbsterklaerend
+- Anzahl logins begrenzen, wirkt nur auf Login Shells, Examples selbsterklaerend
 
 
 FOR-Loops
@@ -220,9 +220,3 @@ Disk-Speed
 * use dd
 * eg: ```dd if=/dev/zero of=file_on_disk_to_test bs=1M count=1024 status=progress```
 * use ```conv=fdatasync``` as option to sync already with dd, so the statistik printed out is right
-
-
-
-
-
-
