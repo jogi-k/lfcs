@@ -256,3 +256,14 @@ Echo vs Sudo
 * sudo sh -e "echo and here ist starts to get complicated because of escape 
 * echo "xxx " > uuuu => echo "xxx " | sudo tee uuuu 
 
+Read file line-wise
+===================
+
+```  #!/bin/bash
+     input="/path/to/txt/file"
+     while IFS= read -r line
+     do
+        echo "$line"
+     done < "$input"
+```
+More and better examples see here : https://www.cyberciti.biz/faq/unix-howto-read-line-by-line-from-file/
