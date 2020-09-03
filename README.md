@@ -267,3 +267,10 @@ Read file line-wise
      done < "$input"
 ```
 More and better examples see here : https://www.cyberciti.biz/faq/unix-howto-read-line-by-line-from-file/
+
+unsudo
+======
+
+* sometimes you have a script  which you need to run with sudo, but there is something in, which should not be run as root (e.g. git checkout because of ssh-keys...)
+* Solution : sudo -u $SUDO_USER your_action 
+
